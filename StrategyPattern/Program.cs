@@ -6,7 +6,17 @@ namespace StrategyPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Animal sparky = new Dog();
+
+            Animal tweety = new Bird();
+
+            Console.WriteLine("Dog: " + sparky.tryToFly());
+
+            Console.WriteLine("Bird: " + tweety.tryToFly());
+
+            sparky.setFlyingAbility(new ItFlys());
+
+            Console.WriteLine("Dog: " + sparky.tryToFly());
         }
     }
 }
